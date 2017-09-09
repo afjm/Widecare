@@ -1,0 +1,9 @@
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        {{ form }}
+    </table>
+    <input type="submit" value="Save and Add Another">
+    <input type="submit" value="Save and Edit">
+    <input type="submit" value="Save">
+</form>

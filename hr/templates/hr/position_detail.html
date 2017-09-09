@@ -1,0 +1,26 @@
+<ul>
+    <li>{{ object.id }}</li>
+    <li>{{ object.name }}</li>
+    <li>{{ object.description }}</li>
+    <li>{{ object.requirement }}</li>
+    <li>{{ object.salary }}</li>
+    <li>{{ object.location }}</li>
+    <li>{{ object.comment }}</li>
+</ul>
+
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>Name_EN</td>
+        <td>Name_CN</td>
+        <td>Sex</td>
+    </tr>
+    {% for staff in staff_list %}
+        <tr>
+            <td>{{ staff.id }}</td>
+            <td>{{ staff.name_en }}</td>
+            <td>{{ staff.name_cn }}</td>
+            <td>{{ staff.sex }}</td>
+        </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,15 @@
+<h1>Here are all positions:</h1>
+{% if position_list %}
+    <table border="1">
+        {% for position in position_list %}
+            <tr>
+                <td><a href="{% url 'hr:position_detail' position.id %}">{{ position.name }}</a></td>
+                <td><a href="{% url 'hr:position_edit' position.id %}">edit</a> -- <a
+                        href="{% url 'hr:position_delete' position.id %}">delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <h2>No position</h2>
+{% endif %}
+<h1><a href="{% url 'hr:position_add' %}">Add A Position</a></h1>

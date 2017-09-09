@@ -1,0 +1,15 @@
+<h1>Here are all staffs:</h1>
+{% if object_list %}
+    <table border="1">
+        {% for staff in object_list %}
+            <tr>
+                <td><a href="{% url 'hr:staff_detail' staff.id %}">{{ staff.name_en }}</a></td>
+                <td><a href="{% url 'hr:staff_edit' staff.id %}">edit</a> -- <a
+                        href="{% url 'hr:staff_delete' staff.id %}">delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <h2>No staff</h2>
+{% endif %}
+<h1><a href="{% url 'hr:staff_add' %}">Add A staff</a></h1>
