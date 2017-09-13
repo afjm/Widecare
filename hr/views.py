@@ -1,6 +1,7 @@
 from django.urls import reverse_lazy
 from django.shortcuts import render
 from django.views.generic import CreateView, DeleteView, UpdateView, ListView, DetailView
+
 from .models import *
 
 
@@ -8,6 +9,8 @@ from .models import *
 
 def index(request):
     return render(request, 'hr/index.html')
+
+
 
 
 class PositionAdd(CreateView):
