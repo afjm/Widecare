@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^accounts/logout/', LogoutView.as_view(next_page=reverse_lazy('homepage')), name='logout'),
     url(r'^hr/', include('hr.urls')),
     url(r'^$', views.index, name='homepage'),
+    url(r'^$', views.index, name='homepage'),
 ]
